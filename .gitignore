@@ -1,0 +1,36 @@
+# Binaries
+tenantai
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output
+*.out
+
+# DuckDB files
+*.db
+*.db.wal
+
+# Data directory
+data/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+.claude/

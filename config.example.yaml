@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  env: development
+  shutdown_timeout: 15          # seconds for graceful shutdown
+  admin_api_key: "${ADMIN_API_KEY}"  # optional, empty = auth disabled
+  rate_limit:
+    enabled: false
+    requests_per_second: 10
+
+openrouter:
+  api_key: "${OPENROUTER_API_KEY}"
+  base_url: "https://openrouter.ai/api/v1"
+
+database:
+  services_dir: "./data/services"
+  max_connections: 10
+
+services:
+  - id: default
+    name: "Default Service"
