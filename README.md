@@ -83,6 +83,7 @@ See [docs/API.md](docs/API.md) for full endpoint documentation with curl example
 
 | Endpoint | Description |
 |----------|-------------|
+| `GET /v1/models` | List available models from OpenRouter |
 | `POST /v1/chat/completions` | Chat completion (requires `X-Service-ID` header) |
 | `POST /services` | Create a new service |
 | `GET /services` | List all services |

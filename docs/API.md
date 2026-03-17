@@ -48,6 +48,46 @@ GET /health
 
 ---
 
+### List Models
+
+```
+GET /v1/models
+```
+
+Returns all models available through OpenRouter.
+
+**Response:**
+
+```json
+{
+  "data": [
+    {
+      "id": "openai/gpt-4o",
+      "name": "GPT-4o",
+      "description": "...",
+      "context_length": 128000,
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000015"
+      },
+      "architecture": {
+        "input_modalities": ["text", "image"],
+        "output_modalities": ["text"],
+        "tokenizer": "o200k_base"
+      }
+    }
+  ]
+}
+```
+
+**curl:**
+
+```bash
+curl http://localhost:8080/v1/models
+```
+
+---
+
 ### Chat Completion
 
 ```
