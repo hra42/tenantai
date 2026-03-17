@@ -66,6 +66,7 @@ func main() {
 	svcHandler := handler.NewServiceHandler(mgr, cfg.Database.ServicesDir)
 	convHandler := handler.NewConversationHandler(mgr)
 	healthHandler := handler.NewHealthHandler(mgr)
+	modelsHandler := handler.NewModelsHandler(orClient)
 
 	// Rate limiter (created before app so we can close it on shutdown)
 	var rateLimiter *middleware.RateLimiter
@@ -95,6 +96,9 @@ func main() {
 	services.Get("/:id", svcHandler.HandleGet)
 	services.Delete("/:id", svcHandler.HandleDelete)
 	services.Get("/:id/conversations", convHandler.HandleList)
+
+	// Models endpoint (no auth required)
+	app.Get("/v1/models", modelsHandler.HandleList)
 
 	// Chat completion routes (require X-Service-ID header)
 	v1 := app.Group("/v1", middleware.ServiceContext(mgr))

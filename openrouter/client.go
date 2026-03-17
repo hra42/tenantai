@@ -17,6 +17,11 @@ type ChatCompleter interface {
 	ChatCompleteStream(ctx context.Context, req *models.ChatCompletionRequest) (*or.ChatStream, error)
 }
 
+// ModelLister abstracts model listing for testability.
+type ModelLister interface {
+	ListModels(ctx context.Context) (*or.ModelsResponse, error)
+}
+
 // Client wraps the OpenRouter SDK client.
 type Client struct {
 	client *or.Client
@@ -147,6 +152,15 @@ func (c *Client) ChatCompleteStream(ctx context.Context, req *models.ChatComplet
 		return nil, mapError(err)
 	}
 	return stream, nil
+}
+
+// ListModels retrieves available models from OpenRouter.
+func (c *Client) ListModels(ctx context.Context) (*or.ModelsResponse, error) {
+	resp, err := c.client.ListModels(ctx, nil)
+	if err != nil {
+		return nil, mapError(err)
+	}
+	return resp, nil
 }
 
 // mapError translates SDK errors to AppError.
