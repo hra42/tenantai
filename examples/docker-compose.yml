@@ -1,0 +1,29 @@
+services:
+  tenantai:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    volumes:
+      - backend-data:/app/data/services
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./simple-frontend:/usr/share/nginx/html:ro
+    depends_on:
+      tenantai:
+        condition: service_healthy
+
+volumes:
+  backend-data:

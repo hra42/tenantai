@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Backend Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>AI Backend Demo</h1>
+        </div>
+        <div class="header-right">
+            <span id="token-usage">Tokens: —</span>
+        </div>
+    </header>
+
+    <div class="controls">
+        <label>
+            Model:
+            <input type="text" id="model-input" value="openai/gpt-4o-mini" placeholder="openai/gpt-4o-mini">
+        </label>
+        <label class="toggle">
+            <input type="checkbox" id="stream-toggle" checked>
+            Stream
+        </label>
+    </div>
+
+    <main id="messages"></main>
+
+    <footer>
+        <textarea id="user-input" placeholder="Type a message…" rows="1"></textarea>
+        <button id="send-btn">Send</button>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
