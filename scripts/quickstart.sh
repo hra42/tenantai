@@ -6,7 +6,7 @@ echo
 
 # Check Go
 if ! command -v go &>/dev/null; then
-    echo "Error: Go is not installed. Install Go 1.22+ from https://go.dev/dl/"
+    echo "Error: Go is not installed. Install Go 1.26+ from https://go.dev/dl/"
     exit 1
 fi
 
@@ -14,8 +14,8 @@ GO_VERSION=$(go version | grep -oE 'go[0-9]+\.[0-9]+' | head -1 | sed 's/go//')
 GO_MAJOR=$(echo "$GO_VERSION" | cut -d. -f1)
 GO_MINOR=$(echo "$GO_VERSION" | cut -d. -f2)
 
-if [ "$GO_MAJOR" -lt 1 ] || { [ "$GO_MAJOR" -eq 1 ] && [ "$GO_MINOR" -lt 22 ]; }; then
-    echo "Error: Go 1.22+ required, found go${GO_VERSION}"
+if [ "$GO_MAJOR" -lt 1 ] || { [ "$GO_MAJOR" -eq 1 ] && [ "$GO_MINOR" -lt 26 ]; }; then
+    echo "Error: Go 1.26+ required, found go${GO_VERSION}"
     exit 1
 fi
 

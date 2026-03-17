@@ -4,7 +4,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ## Development Setup
 
-1. **Prerequisites**: Go 1.22+ and optionally [golangci-lint](https://golangci-lint.run/)
+1. **Prerequisites**: Go 1.26+ and optionally [golangci-lint](https://golangci-lint.run/)
 2. **Clone the repo**:
    ```bash
    git clone https://github.com/hra42/tenantai.git

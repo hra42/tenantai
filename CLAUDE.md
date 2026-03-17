@@ -4,11 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-tenantai is a minimal, extensible AI backend in Go that abstracts the OpenRouter API, provides per-service DuckDB isolation, and supports multi-tenant AI applications. The development plan lives in `dev-plan/phases.md`.
-
+tenantai is a minimal, extensible AI backend in Go that abstracts the OpenRouter API, provides per-service DuckDB isolation, and supports multi-tenant AI applications.
 ## Tech Stack
 
-- **Language:** Go 1.22+
+- **Language:** Go 1.26+
 - **Framework:** Fiber v3
 - **Database:** DuckDB (one `.db` file per service for tenant isolation)
 - **AI API:** OpenRouter via `openrouter-go` SDK (github.com/hra42/openrouter-go)

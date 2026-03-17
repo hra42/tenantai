@@ -25,7 +25,7 @@ What actually happened.
 ## Environment
 
 - **OS**: [e.g., macOS 14, Ubuntu 22.04]
-- **Go version**: [e.g., 1.22]
+- **Go version**: [e.g., 1.26]
 - **tenantai version/commit**: [e.g., v0.1.0 or commit hash]
 
 ## Logs

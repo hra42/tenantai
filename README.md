@@ -1,7 +1,7 @@
 # tenantai
 
-[![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat&logo=go)](https://go.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Go Version](https://img.shields.io/badge/Go-1.26+-00ADD8?style=flat&logo=go)](https://go.dev)
+[![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hra42/tenantai)](https://goreportcard.com/report/github.com/hra42/tenantai)
 
 A single-binary, production-ready AI API proxy with per-tenant isolation. Not a framework — a deployable backend. Connect to 300+ models via OpenRouter, get conversation logging for free, extend only what you need.
@@ -150,4 +150,4 @@ See [docs/EXTENDING.md](docs/EXTENDING.md) for guides on adding JWT auth, RAG, c
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Unlicense](LICENSE).
