@@ -18,6 +18,9 @@ tenantai
 # Data directory
 data/
 
+# Dev plan
+dev-plan/
+
 # Environment
 .env
 .env.*
