@@ -4,12 +4,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hra42/tenantai)](https://goreportcard.com/report/github.com/hra42/tenantai)
 
-A single-binary, production-ready AI API proxy with per-tenant isolation. Not a framework — a deployable backend. Connect to 150+ models via OpenRouter, get conversation logging for free, extend only what you need.
+A single-binary, production-ready AI API proxy with per-tenant isolation. Not a framework — a deployable backend. Connect to 300+ models via OpenRouter, get conversation logging for free, extend only what you need.
 
 ## Features
 
 - **Multi-tenant Isolation** — Each service gets its own DuckDB database file
-- **OpenRouter Integration** — Unified interface to 150+ AI models
+- **OpenRouter Integration** — Unified interface to 300+ AI models
 - **Streaming Support** — Server-Sent Events (SSE) for real-time responses
 - **Async Conversation Logging** — Non-blocking logging to preserve API latency
 - **Service Management API** — Create, list, and delete isolated services at runtime
@@ -123,7 +123,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for detailed design documentati
 | Multi-tenant isolation | Per-service DuckDB | Manual | Manual | None |
 | Single binary | Yes | No (Python) | No (Python) | N/A |
 | Conversation logging | Built-in, async | Manual setup | Manual setup | None |
-| Model access | 150+ via OpenRouter | Multiple providers | Multiple providers | 150+ models |
+| Model access | 300+ via OpenRouter | Multiple providers | Multiple providers | 300+ models |
 | Streaming | SSE built-in | Framework-dependent | Yes | Yes |
 | Complexity | Minimal, focused | High (large framework) | Moderate | API only |
 | Extensibility | Middleware + interfaces | Plugins/chains | Callbacks | N/A |
