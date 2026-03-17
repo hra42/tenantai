@@ -1,6 +1,6 @@
-FROM golang:1.26-alpine AS builder
+FROM golang:1.26-trixie AS builder
 
-RUN apk add --no-cache gcc musl-dev
+RUN apt-get update && apt-get install -y --no-install-recommends gcc g++ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 COPY go.mod go.sum ./
@@ -9,14 +9,14 @@ COPY . .
 
 RUN CGO_ENABLED=1 go build -o tenantai .
 
-FROM alpine:3.21
+FROM debian:trixie-slim
 
-RUN apk add --no-cache ca-certificates
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /app/data/services
 
 WORKDIR /app
 COPY --from=builder /build/tenantai .
-COPY --from=builder /build/config.yaml .
+COPY --from=builder /build/config.example.yaml ./config.yaml
 
 EXPOSE 8080
 CMD ["./tenantai"]
