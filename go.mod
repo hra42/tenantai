@@ -6,7 +6,7 @@ require (
 	github.com/duckdb/duckdb-go/v2 v2.10501.0
 	github.com/gofiber/fiber/v3 v3.1.0
 	github.com/google/uuid v1.6.0
-	github.com/hra42/openrouter-go v1.5.2
+	github.com/hra42/openrouter-go v1.6.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
