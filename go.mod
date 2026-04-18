@@ -3,7 +3,7 @@ module github.com/hra42/tenantai
 go 1.26
 
 require (
-	github.com/duckdb/duckdb-go/v2 v2.10501.0
+	github.com/duckdb/duckdb-go/v2 v2.10502.0
 	github.com/gofiber/fiber/v3 v3.1.0
 	github.com/google/uuid v1.6.0
 	github.com/hra42/openrouter-go v1.6.0
@@ -13,12 +13,12 @@ require (
 require (
 	github.com/andybalholm/brotli v1.2.0 // indirect
 	github.com/apache/arrow-go/v18 v18.5.1 // indirect
-	github.com/duckdb/duckdb-go-bindings v0.10501.0 // indirect
-	github.com/duckdb/duckdb-go-bindings/lib/darwin-amd64 v0.10501.0 // indirect
-	github.com/duckdb/duckdb-go-bindings/lib/darwin-arm64 v0.10501.0 // indirect
-	github.com/duckdb/duckdb-go-bindings/lib/linux-amd64 v0.10501.0 // indirect
-	github.com/duckdb/duckdb-go-bindings/lib/linux-arm64 v0.10501.0 // indirect
-	github.com/duckdb/duckdb-go-bindings/lib/windows-amd64 v0.10501.0 // indirect
+	github.com/duckdb/duckdb-go-bindings v0.10502.0 // indirect
+	github.com/duckdb/duckdb-go-bindings/lib/darwin-amd64 v0.10502.0 // indirect
+	github.com/duckdb/duckdb-go-bindings/lib/darwin-arm64 v0.10502.0 // indirect
+	github.com/duckdb/duckdb-go-bindings/lib/linux-amd64 v0.10502.0 // indirect
+	github.com/duckdb/duckdb-go-bindings/lib/linux-arm64 v0.10502.0 // indirect
+	github.com/duckdb/duckdb-go-bindings/lib/windows-amd64 v0.10502.0 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
 	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/gofiber/schema v1.7.0 // indirect
